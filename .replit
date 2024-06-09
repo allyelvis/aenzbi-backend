@@ -6,3 +6,7 @@ channel = "stable-23_11"
 
 [deployment]
 run = ["sh", "-c", "Backend"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
