@@ -1,0 +1,29 @@
+{
+    "recommendations": [
+        "zenwave360.zdl-vscode",
+        "wordpresstoolbox.wordpress-toolbox",
+        "calaway.wordpress-snippets",
+        "claudiosanches.woocommerce",
+        "hridoy.wordpress",
+        "mihailik.web-previewer",
+        "yogesh.web-ext",
+        "walkme.web-developer-extension-pack",
+        "hardikpthv.lit-snippets",
+        "tintinweb.vscode-vyper",
+        "mbarkcode.net-backend-pack",
+        "martinandersen.martin-sql-databases",
+        "andrevaleoutlook.vscode-dot-http-files",
+        "erdpme.24hours",
+        "activeclientmods.activeclientmods-dark-theme",
+        "fragata-adrian.adox-backend-snippets",
+        "atishay-jain.all-autocomplete",
+        "amazonwebservices.amazon-q-vscode",
+        "johnpapa.angular2",
+        "herrherrmann.angular-bootstrap",
+        "mrmlnc.vscode-apache",
+        "arm.arm-debugger",
+        "arm.remote-build",
+        "wupb.arrange-selection",
+        "asciidoctor.asciidoctor-vscode"
+    ]
+}
