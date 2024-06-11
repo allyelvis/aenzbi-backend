@@ -1,5 +1,5 @@
 run = "Backend"
-modules = ["nodejs-20"]
+modules = ["nodejs-20", "python-3.10"]
 
 [nix]
 channel = "stable-23_11"
