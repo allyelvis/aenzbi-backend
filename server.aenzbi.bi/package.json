@@ -13,13 +13,18 @@
   },
   "name": "server.aenzbi.bi",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "## Overview"
+  "author": "Ally Elvis Nzeyimana",
+  "license": "MIT",
+  "description": "## Overview",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/allyelvis/aenzbi-backend"
+  }
 }
