@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "aenzbi-business",
+    "public": "server.aenzbi.bi",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
