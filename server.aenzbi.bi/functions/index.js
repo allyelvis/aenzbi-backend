@@ -45,6 +45,28 @@ app.get("/users/me", authenticateToken, (req, res) => {
     res.json({ user: req.user });
 });
 
+const authRoutes = require("./modules/auth/auth.routes");
+app.use("/auth", authenticateToken, authRoutes);
+const salesRoutes = require("./modules/sales/sales.routes");
+app.use("/sales", authenticateToken, salesRoutes);
+const stockRoutes = require("./modules/stock/stock.routes");
+app.use("/stock", authenticateToken, stockRoutes);
+const productRoutes = require("./modules/product/product.routes");
+app.use("/product", authenticateToken, productRoutes);
+const userRoutes = require("./modules/user/user.routes");
+app.use("/user", authenticateToken, userRoutes);
+const propertyRoutes = require("./modules/property/property.routes");
+app.use("/property", authenticateToken, propertyRoutes);
+const reportRoutes = require("./modules/report/report.routes");
+app.use("/report", authenticateToken, reportRoutes);
+const paymentRoutes = require("./modules/payment/payment.routes");
+app.use("/payment", authenticateToken, paymentRoutes);
+const restaurantRoutes = require("./modules/restaurant/restaurant.routes");
+app.use("/restaurant", authenticateToken, restaurantRoutes);
+const accountingRoutes = require("./modules/accounting/accounting.routes");
+app.use("/accounting", authenticateToken, accountingRoutes);
+const hotelRoutes = require("./modules/hotel/hotel.routes");
+app.use("/hotel", authenticateToken, hotelRoutes);
 app.get("/", (req, res) => {
     res.send("AENZBi Backend is running...");
 });
