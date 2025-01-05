@@ -7,44 +7,43 @@
     <title>AENZBi Backend - API Documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
     <div class="container mx-auto mt-10 px-6">
-        <h1 class="text-4xl font-bold text-center mb-8">AENZBi Backend API</h1>
-        <p class="text-center text-lg mb-12">Welcome to the AENZBi Business Management and POS API. Use the endpoints below to manage transactions, inventory, users, and more.</p>
+        <h1 class="text-4xl font-bold text-center mb-10">AENZBi Backend API</h1>
+        <p class="text-center text-lg mb-12">This API powers the AENZBi Business Management and POS system.</p>
 
         <div class="bg-white shadow-md rounded-lg p-6">
-            <h2 class="text-2xl font-semibold mb-4">Endpoints</h2>
-            <ul class="space-y-4">
-                <li>
-                    <strong>Authentication</strong>
-                    <p>POST <code>/auth/login</code> - Authenticate and receive a JWT token.</p>
-                </li>
-                <li>
-                    <strong>Sales</strong>
-                    <p>POST <code>/sales</code> - Record sales transactions.</p>
-                </li>
-                <li>
-                    <strong>Products</strong>
-                    <p>GET <code>/products</code> - Fetch list of available products.</p>
-                </li>
-                <li>
-                    <strong>Users</strong>
-                    <p>GET <code>/users</code> - Manage and fetch user details.</p>
-                </li>
-                <li>
-                    <strong>Inventory</strong>
-                    <p>POST <code>/stock</code> - Record stock movements.</p>
-                </li>
-                <li>
-                    <strong>Reports</strong>
-                    <p>GET <code>/reports</code> - Generate system reports.</p>
-                </li>
-            </ul>
+            <h2 class="text-2xl font-semibold mb-6">Endpoints</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold">Authentication</h3>
+                    <p>POST <code>/auth/login</code></p>
+                    <p>Authenticate users and receive a JWT token.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Sales</h3>
+                    <p>POST <code>/sales</code></p>
+                    <p>Record sales transactions. Requires JWT.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Products</h3>
+                    <p>GET <code>/products</code></p>
+                    <p>Retrieve a list of available products.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">User Info</h3>
+                    <p>GET <code>/users/me</code></p>
+                    <p>Fetch user details (protected). Requires JWT.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="mt-12 text-center">
-            <p class="text-gray-700">© 2025 AENZBi. All rights reserved.</p>
+        <div class="mt-16 text-center">
+            <p class="text-gray-500">© 2025 AENZBi. Powered by Firebase Functions.</p>
         </div>
     </div>
 
