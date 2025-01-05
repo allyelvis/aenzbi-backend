@@ -1,19 +1,36 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const functions = require("firebase-functions");
+const express = require("express");
+const cors = require("cors");
+const app = express();
+const jwt = require("jsonwebtoken");
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+// Middleware
+app.use(cors({ origin: true }));
+app.use(express.json());
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+// Example environment variable (JWT secret)
+const JWT_SECRET = process.env.JWT_SECRET || "default_secret_key";
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+// Authentication Endpoint
+app.post("/auth/login", (req, res) => {
+    const { username, password } = req.body;
+    if (username === "admin" && password === "password") {
+        const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: "1h" });
+        res.json({ token });
+    } else {
+        res.status(401).send("Invalid credentials");
+    }
+});
+
+// Sales Endpoint
+app.post("/sales", (req, res) => {
+    res.send("Sales transaction recorded");
+});
+
+// Product Endpoint
+app.get("/products", (req, res) => {
+    res.json([{ id: 1, name: "Product A" }, { id: 2, name: "Product B" }]);
+});
+
+// Export Express App as Cloud Function
+exports.api = functions.https.onRequest(app);
